@@ -17,7 +17,7 @@ public class Main {
 		System.out.println("H: ".concat(h));
 		System.out.println("R: ".concat(result));
 
-		System.out.println("Passed: ".concat(String.valueOf(h.equals(result))));
+		System.out.println(h.equals(result) ? "Passed" : "Failed");
 	}
 
 }

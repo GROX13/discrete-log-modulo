@@ -26,7 +26,7 @@ abstract class DiscreteLogModuloBase implements DiscreteLogModulo {
 			Hashtable<BigInteger, Integer> leftHandSide = new Hashtable<>();
 
 			for (int i = 0; i < B; i++) {
-				BigInteger localResult = H.divide(G.modPow(BigInteger.valueOf(i), P));
+				BigInteger localResult = H.divide(G.modPow(BigInteger.valueOf(i), P)).mod(P);
 				leftHandSide.put(localResult, i);				
 			}
 			

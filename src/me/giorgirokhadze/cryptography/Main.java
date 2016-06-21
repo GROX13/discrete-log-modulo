@@ -12,8 +12,8 @@ public class Main {
 		String h = "3239475104050450443565264378728065788649097520952449527834792452971981976143292558073856937958553180532878928001494706097394108577585732452307673444020333";
 
 		String result = DiscreteLogModuloBase.getInstance().calculate(p, g, h);
-		result = new BigInteger(g).pow(Integer.valueOf(result)).toString();
 		System.out.println("X: ".concat(result));
+		result = new BigInteger(g).modPow(new BigInteger(result), new BigInteger(p)).toString();
 		System.out.println("H: ".concat(h));
 		System.out.println("R: ".concat(result));
 

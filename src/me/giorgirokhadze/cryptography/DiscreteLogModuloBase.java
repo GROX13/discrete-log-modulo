@@ -38,7 +38,7 @@ abstract class DiscreteLogModuloBase implements DiscreteLogModulo {
 				BigInteger localResult = GB.modPow(BigInteger.valueOf(i), P);
 				if (leftHandSide.containsKey(localResult)) {
 					Integer x1 = leftHandSide.get(localResult);
-					return String.valueOf(i * B + x1);
+					return String.valueOf(((long) i) * B + x1);
 				}
 			}
 			
